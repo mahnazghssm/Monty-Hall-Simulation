@@ -1,86 +1,117 @@
-# 🎯 Monty Hall Simulation 🚗🐐
+# Monty Hall Simulation
 
-This project simulates the famous **Monty Hall Problem**, implemented in Python using **Streamlit** for dynamic visualizations. The simulation demonstrates how **switching doors increases your chance of winning** the car in a game show setup.
+## Description
 
----
+This project is a Python simulation of the Monty Hall problem.
 
-## 🧠 What is the Monty Hall Problem?
+It compares two strategies:
 
-The Monty Hall Problem is a probability puzzle based on a game show scenario:
+- Staying with the first choice
+- Switching to the other unopened door
 
-1. There are **3 doors**: behind one is a **car**, behind the others are **goats**.
-2. You pick one door.
-3. The host (Monty Hall), who knows what’s behind the doors, opens **one of the remaining doors**, revealing a **goat**.
-4. You’re now given a choice: **stay** with your original door, or **switch** to the other unopened door.
+The project also includes a Streamlit dashboard to run the simulation and see the results in charts.
 
-🎯 The correct strategy is to **switch**, which gives you a **2/3 chance** of winning, compared to a **1/3 chance** if you stay.
+## The Monty Hall Problem
 
----
+The Monty Hall problem is a probability problem with three doors.
 
-## 🚀 Features
+Behind one door there is a car, and behind the other two doors there are goats.
 
-- Simulate up to **100,000 games**
-- Real-time visualization of:
-  - 🟥 Win % without switching
-  - 🟩 Win % with switching
-- Clean, interactive UI with **Streamlit**
-- Fast simulation with animated chart updates
+The contestant first chooses one door. The host then opens one of the other doors and shows a goat. The contestant can then either stay with the first choice or switch to the other unopened door.
 
----
+This project uses simulation to compare these two choices.
 
-## ⚙️ Installation & Setup
+## Project Structure
 
-To run this project locally:
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/mahnazghassemi/monty-hall-simulation.git
-cd monty-hall-simulation
-```
-
-2.	Set up a virtual environment (optional but recommended):
-
-```
-python3 -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
-3.	Install dependencies:
-Make sure you have Streamlit installed by running:
-```
-pip install -r requirements.txt
-```
-4.	Install Streamlit:
-```
-pip install -r requirements.txt
-```
-5.	Create the required file structure:
-The simulation code assumes you have a file src/monty_hall.py that contains the simulate_game() function. Make sure your project structure looks like this:
-```
-monty-hall-simulation/
-├── src/
-│   └── monty_hall.py        # Core simulation logic
-├── app.py                   # Streamlit dashboard
+```text
+.
 ├── README.md
 ├── requirements.txt
+├── .gitignore
+└── src
+    ├── monty_hall.py
+    ├── app.py
+    └── images
+        └── banner.png
 ```
-Simulate a Game 
-Run the Streamlit app:
+
+- `monty_hall.py`: Contains the simulation logic
+- `app.py`: Streamlit dashboard
+- `banner.png`: Image used in the dashboard
+- `requirements.txt`: Required packages
+- `.gitignore`: Files and folders ignored by Git
+
+## Technologies
+
+- Python
+- Streamlit
+- Pandas
+
+## Requirements
+
+- Python 3.7 or higher
+- Streamlit
+- Pandas
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mahnazghssm/Monty-Hall-Simulation.git
 ```
-streamlit run app.py
+
+Go to the project folder:
+
+```bash
+cd Monty-Hall-Simulation
 ```
-🧪 How to Use
-	1.	Choose the number of games to simulate.
-	2.	Watch the win percentage charts update:
-	•	🔴 No Switch: wins when sticking with the first choice
-	•	🟢 Switch: wins when switching doors after the goat is revealed
-	3.	Observe that switching wins ~66%, while not switching wins ~33% — just like theory predicts!
 
-📊 Example Output
+Install the required packages:
 
-If you simulate 10,000 games:
-	•	Switching wins ~66%
-	•	Staying wins ~33%
+```bash
+pip install -r requirements.txt
+```
 
-These results align with the mathematical solution to the Monty Hall problem.
+## Usage
 
+### Run the Python Script
 
+```bash
+python src/monty_hall.py
+```
+
+This runs the simulation in the terminal and prints the winning percentages for both strategies.
+
+### Run the Streamlit Dashboard
+
+```bash
+streamlit run src/app.py
+```
+
+The dashboard lets you choose the number of games and shows two charts for the results.
+
+## Results
+
+With a large number of simulations, the results usually get closer to the theoretical probabilities:
+
+- Staying: about 33%
+- Switching: about 67%
+
+The exact results can be different each time because the simulation uses random choices.
+
+## What I Practiced
+
+- Python functions
+- Loops and conditional statements
+- Randomization
+- Basic probability and simulation
+- Pandas
+- Data visualization
+- Streamlit
+
+## Author
+
+Mahnaz Ghassemi
+
+GitHub: mahnazghssm
