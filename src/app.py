@@ -13,8 +13,7 @@ st.set_page_config(
 
 # Display an image about the Monty Hall problem
 st.image(
-    "https://www.mikealche.com/wp-content/uploads/2021/11/"
-    "The-Monty-Hall-Problem-Demystified-1536x864.png",
+    "src/images/banner.png",
     width=600,
 )
 
