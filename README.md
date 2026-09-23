@@ -115,3 +115,7 @@ The exact results can be different each time because the simulation uses random 
 Mahnaz Ghassemi
 
 GitHub: mahnazghssm
+
+## License
+
+This project is licensed under the MIT License.
